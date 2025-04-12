@@ -1,0 +1,69 @@
+<% layout("/layouts/boiler") %>
+<div class="row">
+    <div class="col-7 offset-2">   
+        <!-- if our screen divided into 12 parts it occupies only 7 cols/parts , offset used to margin from left -->
+<body>
+    <h2> Add a new Listing</h2>
+    <br> <br> 
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data" >
+     <div class="mb-3">
+        <label class="form-label">Enter Title</label>
+        <input type="text" class="form-control"  placeholder="enter title " name="listing[title]" required />
+        <div class="invalid-feedback"> please enter a catchy title</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Enter Description</label>
+        <input type="text"class="form-control" required placeholder="enter desc " name="listing[desc]" >
+        <div class="invalid-feedback"> please enter a desc </div>
+    </div>
+    <!-- <div class="mb-3">
+        <label class="form-label"> Enter URL</label>
+        <input type="text"class="form-control" placeholder="enter image url " name="listing[image]" >
+    </div> -->
+    <div class="mb-3">
+        <label class="form-label"> upload  image</label>
+        <input type="file"class="form-control" placeholder="enter image url "  required name="listing[image]" >
+    </div>
+<div class="row">
+    <!-- to make both in one row -->
+    <div class="mb-3 col-md-4">
+        <label class="form-label">Enter price</label>
+        <input type="text" class="form-control" required placeholder="1750 " name="listing[price]" >
+        <div class="invalid-feedback"> please Enter price </div>
+    </div>
+    <div class="mb-3 col-md-8">
+        <label class="form-label"> Enter location</label>
+        <input type="text" class="form-control" placeholder="odisha " required name="listing[location]" >
+        <div class="invalid-feedback"> please Enter the location</div>
+    </div>
+</div>
+<div class="row">
+    <div class="mb-3 col-md-6">
+        <label class="form-label">Enter country</label>
+        <input type="text" class="form-control" placeholder="India " required name="listing[country]" >
+        <div class="invalid-feedback"> please enter name of country</div>
+    </div>  
+
+    <div class="mb-3 col-6">
+        <label for="genre" class="form-label">Enter genre</label>
+        <select  class="form-control" placeholder="eg. rooms" required  name="listing[genre]">
+            <option value="Rooms"  >Rooms</option>
+            <option value="IconicCities" >Iconic cities</option>
+            <option value="Mountain"  >Mountain</option>
+            <option value="Castles" >Castles</option>
+            <option value="AmazingPools" >Amazing Pools</option>
+            <option value="Camping" >Camping</option>
+            <option value="farms" >farms </option>
+            <option value="Arctic" >Arctic</option>
+        </select>
+        
+    </div> 
+</div>
+
+
+        <button class=" btn btn-danger">ADD</button>
+    </form>
+   
+</body>
+</div>
+</div>

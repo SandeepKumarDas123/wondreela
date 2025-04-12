@@ -1,0 +1,119 @@
+body{
+    /* padding: 20px !important; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* to make navbar sticky at bottom */
+#body{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    border-bottom: #222222;
+    background-color: white;
+}
+#explore{
+    opacity: 0.6;
+
+}
+
+#explore:hover{
+    opacity: 2;
+    cursor: pointer;
+
+}
+
+.fa-compass{
+color: red;
+font-size: 3rem;
+}
+
+.nav-link{
+    color: #222222 !important;; 
+    /* !important used toover ride our css property over bootstrap */
+}
+
+
+/* footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration:underline;
+}
+.f-info-links{
+    width: 100%;
+}
+.f-info-socials{
+    width: 100%;
+    font-size: 1.4rem;
+    margin-right: 2rem;
+}
+.f-info-socials span{
+    margin-right: 1.2rem;
+     /* icon */
+}
+
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:space-evenly;
+}
+.listing-card{
+    border: none !important;
+    /* height: 350px !important;
+    width: 500px !important; */
+    margin-bottom: 3rem;
+}
+.card-img-top{
+    border-radius: 1.2rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0rem !important;
+    /* margin-left: 3rem !important; */
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+
+.show-link{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+
+}
+
+.card-img-overlay:hover{
+    opacity: 0.19;
+   background-color: white;
+
+}
+/* show */
+.show-img{
+    height: 47vh;
+    
+}
+.btns{
+    display: flex !important;
+    margin-right: 12px!important;
+    justify-content:space-evenly;
+}
+.filter{
+
+    text-decoration: none !important;
+    color: black;
+}
+
+a{
+    text-decoration: none !important;
+}

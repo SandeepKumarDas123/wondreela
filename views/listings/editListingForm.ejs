@@ -1,0 +1,46 @@
+<% layout("/layouts/boiler") %>
+    <div class="row mt-3">
+        <div class="col-7 offset-2">
+
+            <body>
+                <h2> Edit Your Listing </h2>
+                <form method="post" action="/listings/<%=list._id%>?_method=PUT" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Enter Title</label>
+                        <input class="form-control" type="text" value="<%=list.title%>" name="listing[title]">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="desc" class="form-label">Desc</label>
+                        <input class="form-control" type="text" value="<%=list.desc%>" name="listing[desc]">
+
+                    <div class="mb-3">
+                    </div>original image : <br>
+                        <img src="<%= originalUrl %>"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">image</label>
+                        <input class="form-control" type="file"  name="listing[image]">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">price</label>
+                            <input class="form-control" type="number" value="<%=list.price%>" name="listing[price]">
+                        </div>
+
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location</label>
+                            <input class="form-control" type="text" value="<%=list.location%>" " name="listing[location]">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">country</label>
+                        <input class="form-control" type="text" value="<%=list.country%>" " name=" listing[country]">
+                    </div>
+                    <br><br>
+                    <button class="btn btn-danger">EDIT</button>
+                </form>
+            </body>
+        </div>
+    </div>

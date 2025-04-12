@@ -1,0 +1,25 @@
+/* body{
+    background-color: rgb(175, 175, 241);
+}
+
+.all-list{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+}
+
+
+.list{
+    padding: 15px;
+    height: 500px;
+    width: 400px;
+    background-color: rgb(226, 226, 241);
+    margin: 20px;
+    border-radius: 14px;
+     
+}
+img{
+    height: 250px;
+    width: 390px;
+
+} */
