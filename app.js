@@ -8,6 +8,7 @@ const path = require("path");
 const wrapAsync = require('./utils/wrapAsync');
 const methodOverride = require("method-override")
 const session = require("express-session")
+const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 // auth
 const passport = require("passport");
@@ -29,6 +30,18 @@ const app = express();
 // let mongo_url = "mongodb://127.0.0.1:27017/wondrela"
 let mongo_url = process.env.mongo_url;
 
+const store=MongoStore.create({
+    mongoUrl:mongo_url,
+    crypto:{
+        secret:"mySupersecretCode"
+    },
+    touchAfter:24*3600,
+})
+
+store.on("error",()=>{
+    console.log("err in store",err);
+    
+})
 const sessionOption = {
     secret: "mysupersecretcode",
     resave: false,
