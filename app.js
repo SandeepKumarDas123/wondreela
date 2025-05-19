@@ -43,6 +43,7 @@ store.on("error",()=>{
     
 })
 const sessionOption = {
+     store,
     secret: "mysupersecretcode",
     resave: false,
     saveUninitialized: true,
