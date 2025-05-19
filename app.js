@@ -26,7 +26,9 @@ const userRouter = require("./routes/user");
 const app = express();
 
 
-let mongo_url = "mongodb://127.0.0.1:27017/wondrela"
+// let mongo_url = "mongodb://127.0.0.1:27017/wondrela"
+let mongo_url = process.env.mongo_url;
+
 const sessionOption = {
     secret: "mysupersecretcode",
     resave: false,
